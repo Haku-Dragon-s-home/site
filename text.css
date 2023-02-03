@@ -1,7 +1,7 @@
-﻿.text_1 {
+.text_1 {
 	position: absolute;
-	left: 320px;
-	top: 110px;
+	left: 16%;
+	top: 11%;
 	font-size: 30px;
 	color: rgba(100, 102, 102, 0.8);
 	/* old: 244, 243, 241 */
@@ -38,3 +38,17 @@
 	user-select: none;
 	color: rgb(244, 183, 188);
 }
+
+.text_6 {
+	font-size: 15px;
+	user-select: none;
+	color: rgb(112, 198, 172);
+}
+
+.text_7 {
+	font-size: 15px;
+	user-select: none;
+	color: rgba(100, 102, 102, 0.8);
+	opacity: 0.8;
+}
+
