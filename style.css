@@ -1,4 +1,4 @@
-﻿* {
+* {
 	margin: 0;
 	padding: 0;
 }
@@ -31,6 +31,7 @@ html,
 body {
 	white-space: nowrap;
 	height: 100%;
+	width: 100%;
 	font-family: Poppins Regular;
 }
 
@@ -539,25 +540,42 @@ ul li.playing {
 
 
 
-/* 页脚 */
+/* 页脚   有点点bug*/
 .foot_1 {
 	position: absolute;
 	left: 300px;
 	top: 2100px;
 	width: 1400px;
-	height: 150px;
+	height: 180px;
 }
 
+.foot_2 {
+	position: absolute;
+	top: 35px;
+	left: calc(50% - 290px);
 
+}
 
+.foot_3 {
+	position: absolute;
+	top: 35px;
+	left: calc(50% - 110px);
 
+}
 
+.foot_4 {
+	position: absolute;
+	top: 35px;
+	left: calc(50% + 60px);
 
+}
 
+.foot_5 {
+	position: absolute;
+	top: 35px;
+	left: calc(50% + 240px);
 
-
-
-
+}
 
 
 
