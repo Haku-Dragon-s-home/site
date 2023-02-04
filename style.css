@@ -118,6 +118,7 @@ a {
 img {
 	-webkit-user-select: none;
 	-webkit-user-drag: none;
+	border-radius: 15px;
 }
 
 
@@ -355,8 +356,6 @@ img {
 	/* 列表文本高度 */
 	padding: 12px 30px;
 	border-radius: 15px;
-	padding: 12px 30px;
-	border-radius: 15px;
 	background-color: rgba(255, 255, 255, 0.95);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
@@ -576,7 +575,6 @@ ul li.playing {
 	left: calc(50% + 240px);
 
 }
-
 
 
 
