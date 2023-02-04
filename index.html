@@ -9,7 +9,6 @@
 	<link rel="shortcut icon" href="resource/Haku.ico" />
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="text.css">
-	<link rel="stylesheet" href="loading.css">
 
 	<link rel="stylesheet" type="text/css" media="screen and (min-width: 1420px) and (max-width: 1800px)" href="screen/1420-1800.css" />
 	<script src="script.js"></script>
@@ -25,7 +24,26 @@
 <!-- 加载动画 -->
 <section class="bg"></section>
 <div class="text">0%</div>
-<script src="loading.js"></script>
+<script>
+	const background = document.querySelector('.bg')
+	const text = document.querySelector('.text')
+	function scale(number,inMin,inMax,outMin,outMax){
+		return(number-inMin)*(outMax-outMin)/(inMax-inMin)+outMin
+	}
+	let loading = 0
+	let time1 = setInterval(() => {
+		loading++
+ 		 if(loading > 99) {
+    			 background.style.visibility = 'hidden';
+       			 text.style.visibility = 'hidden';
+       			 clearInterval(time1)
+		}
+		text.innerHTML = `${loading}%`
+		text.style.opacity = scale(loading,0,100,1,0)
+		background.style.filter = `blur(${scale(120 - loading,0,100,30,0)}px)`
+		background.style.opacity = scale(loading * 2 - 100,0,100,1,0)
+	},40)
+</script>
 
 <!-- 加载背景   参考了 "豆苗学前端" 的循环滚动图片 -->
 <div class="background-color"></div>
@@ -292,6 +310,6 @@
 
 
 
-</body>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cd389da1614b451a9a7bf4744a26ae83"}'></script><!-- Cloudflare Pages Analytics --></body>
 
 </html>
