@@ -118,7 +118,6 @@ a {
 img {
 	-webkit-user-select: none;
 	-webkit-user-drag: none;
-	border-radius: 15px;
 }
 
 
@@ -284,6 +283,7 @@ img {
 .img-area img {
 	width: 100px;
 	height: 100px;
+	border-radius: 15px;
 	object-fit: cover;
 }
 
