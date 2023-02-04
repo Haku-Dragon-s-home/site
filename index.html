@@ -13,8 +13,14 @@
 
 	<link rel="stylesheet" type="text/css" media="screen and (min-width: 1420px) and (max-width: 1800px)" href="screen/1420-1800.css" />
 	<script src="script.js"></script>
+
+
+
 </head>
-<body oncontextmenu="openMenu(event)" >
+
+
+
+<body oncontextmenu="openMenu(event)">
 
 <!-- 加载动画 -->
 <section class="bg"></section>
@@ -57,6 +63,10 @@
 	</ul>
 
 </div>
+
+
+<!-- 以下内容将会淡入 -->
+<span class="fade-in">
 
 <!-- 提前加载页脚, 防止覆盖白龙 -->
 <div class="foot_1">
@@ -167,9 +177,9 @@
 
 
 	<!-- 播放器   参考了 "想想卷王怎么做" 的代码 -->
-		<div class="wrapper">
+		<div class="wrapper fade-in">
 			<div class="img-area">
-				<img alt="" class="fade-in big"/>
+				<img alt="" class="big"/>
 			</div>
 			<div class="song-details">
 				<p class="name fade-in" style="opacity: 0" >ㅤ</p>
@@ -249,7 +259,7 @@
 			</a>
 		</ul>
 	</div>
-
+</span>
 
 <script>
 	// 加载页脚上线时间
@@ -279,8 +289,6 @@
 	}
 	siteTime();
 </script>
-
-
 
 
 
