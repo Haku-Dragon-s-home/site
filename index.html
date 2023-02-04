@@ -23,7 +23,7 @@
 
 <!-- 加载动画 -->
 <section class="bg"></section>
-<div class="text">0%</div>
+<div class="text">0 %</div>
 <script>
 	const background = document.querySelector('.bg')
 	const text = document.querySelector('.text')
@@ -38,7 +38,7 @@
        			 text.style.visibility = 'hidden';
        			 clearInterval(time1)
 		}
-		text.innerHTML = `${loading}%`
+		text.innerHTML = `${loading} %`
 		text.style.opacity = scale(loading,0,100,1,0)
 		background.style.filter = `blur(${scale(120 - loading,0,100,30,0)}px)`
 		background.style.opacity = scale(loading * 2 - 100,0,100,1,0)
@@ -241,8 +241,7 @@
 			</div>
 		</div>
 
-		<script src="music-list.js"></script>
-		<script src="player.js"></script>
+		<script src="music-player.js"></script>
 
 
 
@@ -310,6 +309,5 @@
 
 
 
-<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cd389da1614b451a9a7bf4744a26ae83"}'></script><!-- Cloudflare Pages Analytics --></body>
 
 </html>
