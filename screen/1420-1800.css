@@ -1,0 +1,199 @@
+.p_1 {
+	left: 225px;
+	top: 75px;
+	width: 750px;
+	height: 450px;
+}
+.p_2 {
+	left: 225px;
+	top: 600px;
+	width: 750px;
+	height: 900px;
+}
+
+
+
+.text_1 {
+	left: 240px;
+	top: 82px;
+	font-size: 22px;
+}
+
+.text_2 {
+	left: 240px;
+	top: 607px;
+	font-size: 22px;
+}
+
+.text_3 {
+	right: 75px;
+	top: 4px;
+	font-size: 7px;
+}
+
+/* Ò³½ÅÎÄ±¾ */
+.text_4 {
+	font-size: 15px;
+}
+
+.text_5 {
+	font-size: 15px;
+}
+
+.text_6 {
+	font-size: 11px;
+}
+
+.text_7 {
+	font-size: 11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper{
+	width: 225px;
+	height: 97px;
+	left: 998px;
+	top: 75px;
+	padding: 18px 22px;
+}
+.img-area {
+	width: 75px;
+	height: 75px;
+	overflow: hidden;
+	margin-top: 4px;
+	border-radius: 11px;
+	box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
+}
+.img-area img {
+	width: 75px;
+	height: 75px;
+	object-fit: cover;
+}
+.song-details {
+	margin: -79px 90px;
+}
+.song-details .name {
+	font-size: 13px;
+}
+.song-details .artist {
+	font-size: 13px;
+	line-height: 26px;
+}
+.progress-area {
+	margin: 94px 90px;
+	height: 3px;
+	width: 139px;
+}
+.progress-area .song-timer {
+	margin-top: 1px;
+}
+.song-timer span {
+	font-size: 10px;
+}
+.controls {
+	margin: -75px 0px;
+}
+.music-list {
+	width: 225px;
+	height: 116px;
+	z-index: 4;
+	padding: 9px 22px;
+}
+.header .row {
+	font-size: 14px;
+}
+.header .row span {
+	margin-left: 4px;
+}
+.header #close {
+	font-size: 16px;
+}
+.music-list ul {
+	margin: 7px 0;
+	max-height: 98px;
+	overflow: auto;
+}
+.music-list ul li {
+	padding-bottom: 8px;
+	margin-bottom: 4px;
+}
+.music-list ul li .row span {
+	font-size: 13px;
+}
+ul li .audio-duration {
+	font-size: 12px;
+}
+.shell:hover{
+	width: 202px;
+}
+.box span {
+	top: 16px;
+	left: 60px;
+	font: 375 15px'';
+}
+.box:nth-child(2)::before,
+.box:nth-child(6)::before{
+	height: 1px;
+	bottom: -7px;
+}
+.e-box {
+	margin: 7px;
+}
+.box img {
+	margin: 9px 0 0 13px;
+	width: 36px;
+	height: 36px;
+}
+.box {
+	margin: 7px;
+}
+.shell {
+	width: 75px;
+	height: 660px;
+	top: calc(50% - 330px);
+}
+.Haku {
+	width: 290px;
+	height: 209px;
+}
+.foot_1 {
+	left: 225px;
+	top: 1575px;
+	width: 1050px;
+	height: 135px;
+}
+.foot_2 {
+	top: 26px;
+}
+.foot_3 {
+	top: 26px;
+}
+.foot_4 {
+	top: 26px;
+}
+.foot_5 {
+	top: 26px;
+}
+.per {
+	right: 4px;
+	font-size: 22px;
+}
+
+
+
+
+
+
+
