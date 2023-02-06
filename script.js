@@ -3,6 +3,12 @@ window.onload = () => {
     const menuHeight = menu.offsetHeight - parseInt(getComputedStyle(menu)['paddingTop']) - parseInt(getComputedStyle(menu)['paddingBottom'])
     menu.style.height = '0'
 
+    // 全部元素加载完成后淡入主体部分
+    let main = document.getElementById('main');
+    main.classList.add('fade-in');
+    let player = document.getElementById('player');
+    player.classList.add('fade-in');
+
     openMenu = e => {
         e.preventDefault()
 
