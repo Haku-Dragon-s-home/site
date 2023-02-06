@@ -44,10 +44,6 @@
 		background.style.opacity = scale(loading * 2 - 100,0,100,1,0)
 	},40)
 
-	window.onload = function() {
-		let main=document.getElementById('main');
-		main.classList.add('fade-in');
-	}
 </script>
 
 <!-- 加载背景   参考了 "豆苗学前端" 的循环滚动图片 -->
@@ -200,7 +196,7 @@
 
 
 	<!-- 播放器   参考了 "想想卷王怎么做" 的代码 -->
-		<div class="wrapper fade-in">
+		<div class="wrapper" style="opacity: 0" id="player">
 			<div class="img-area">
 				<img alt="" class="big"/>
 			</div>
