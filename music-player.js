@@ -1,4 +1,4 @@
-﻿// 感谢 "想想卷王怎么做" 提供的代码.
+// 感谢 "想想卷王怎么做" 提供的代码.
 let allMusic = [
   {
     name: "End Credits.",
@@ -52,7 +52,7 @@ const wrapper = document.querySelector(".wrapper"),
   musicList = wrapper.querySelector(".music-list"),
   moreMusicBtn = wrapper.querySelector("#more-music"),
   closemoreMusic = musicList.querySelector("#close");
-playPauseIcon = wrapper.querySelector("#start");
+  playPauseIcon = wrapper.querySelector("#start");
 
 let musicIndex = Math.floor(1);
 // Math.random() * allMusic.length + 1 随机第一首歌曲
@@ -69,7 +69,7 @@ function loadMusic(indexNumb) {
   musicName.innerText = allMusic[indexNumb - 1].name;
   musicArtist.innerText = allMusic[indexNumb - 1].artist;
   //加载音乐和背景图
-  musicImg.src = `resource/player/${allMusic[indexNumb - 1].src}.png`;
+  musicImg.src = `resource/player/${allMusic[indexNumb - 1].src}.jpg`;
   mainAudio.src = `resource/player/${allMusic[indexNumb - 1].src}.mp3`;
 }
 
