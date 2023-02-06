@@ -43,6 +43,11 @@
 		background.style.filter = `blur(${scale(120 - loading,0,100,30,0)}px)`
 		background.style.opacity = scale(loading * 2 - 100,0,100,1,0)
 	},40)
+
+	window.onload = function() {
+		let main=document.getElementById('main');
+		main.classList.add('fade-in');
+	}
 </script>
 
 <!-- 加载背景   参考了 "豆苗学前端" 的循环滚动图片 -->
@@ -84,7 +89,7 @@
 
 
 <!-- 以下内容将会淡入 -->
-<span class="fade-in">
+<span style="opacity: 0" id="main">
 
 <!-- 提前加载页脚, 防止覆盖白龙 -->
 <div class="foot_1">
