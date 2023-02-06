@@ -511,10 +511,10 @@ ul li.playing {
 	animation: fade-in 6s ease 3s 1;
 	/*调用名称为fade-in的动画，全程动画显示时间4S，进入方式为ease，延时0S进入，播放次数1次*/
 
-	-webkit-animation: fade-in 6s ease 3s 1;
-	-moz-animation: fade-in 6s ease 3s 1;
-	-o-animation: fade-in 6s ease 3s 1;
-	-ms-animation: fade-in 6s ease 3s 1;
+	-webkit-animation: fade-in 6s ease 0s 1;
+	-moz-animation: fade-in 6s ease 0s 1;
+	-o-animation: fade-in 6s ease 0s 1;
+	-ms-animation: fade-in 6s ease 0s 1;
 	
 	/*规定动画的最后状态为结束状态*/
 	animation-fill-mode:forwards;
@@ -652,12 +652,5 @@ ul li.playing {
 	width: 1000px;
 	height: 1200px;
 }
-
-
-
-
-
-
-
 
 
