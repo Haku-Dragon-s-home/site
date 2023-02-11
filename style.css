@@ -592,6 +592,7 @@ ul li.playing {
 }
 
 .text{
+	font-family: 微软雅黑;
 	z-index: 11;
 	font-size: 60px;
  	position: fixed;
