@@ -43,6 +43,27 @@ window.onload = () => {
 
 
 
+    // 跳转主要核心函数
+    const goAnchorPoint = (elemId) => {
+        let anchorHeight = document.getElementById(elemId).offsetTop
+        if (document.documentElement.scrollTop) {
+            document.documentElement.scrollTop = anchorHeight
+        } else if (document.body.scrollTop) {
+            document.body.scrollTop = anchorHeight
+        } else {
+            //这个else指以上两种值均为0的状态，有一者是恒为0的，另一者可能因为回到顶部等操作被置为0，便会出现这种状况
+            document.documentElement.scrollTop = anchorHeight
+            document.body.scrollTop = anchorHeight
+        }
+    }
+    const smoothScroll = (element) => {
+        document.querySelector(element).scrollIntoView({
+            behavior: 'smooth' // 取值用平滑滚动
+        });
+    }
+
+
+
 
 
 
@@ -51,6 +72,11 @@ window.onload = () => {
  function fun_0(){
 	document.execCommand("Copy");	
 };
+
  function fun_1(){
 	location.reload();
+};
+
+ function fun_2(){
+	smoothScroll('#p1')
 };
