@@ -263,14 +263,14 @@
 					<span>ㅤ刷新.</span>
 				</li>
 			</a>
-			<a href = "javascript:void(0)" onclick="fun_2();">
+			<a href = "javascript:void(0)">
 				<li class="menu-item">
 					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAADjSURBVDhPrZM/CsIwGMXfi6O6OXgEwbWKQ4UcwcELeBTPoaA3cHRURBcnRzcdOzqIuJjPpI3/QVL0B1/h99I82tBSRJCHutal4sl0gctG+SyY8hkVECOg0FHNpq76POXdv6GEZhC14tg7BGYSRbrm9SuKgpIynD4KpMrCZRZSkL0z+VJAMKiAjUZ7Zu/W3sMR9HOf9jP/2Cxb+xg9gQwzxdL5fbLs4W7dkm0WJuv1YkzhKnUgUUrNb+OCN0/SzF0+ILpGzO42Lnpxu+4yt9m1pE2GcrTf+j5oiEPuH+OZH04buAJvookNcb/MOwAAAABJRU5ErkJggg==" />
 					<span>ㅤ更多.</span>
 				</li>
 			</a>
 			<li class="menu-item-divider"></li>
-			<a href = "javascript:void(0)" onclick="fun_3();">
+			<a href = "javascript:void(0)" onclick="fun_2();">
 				<li class="menu-item menu-item-danger">
 					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAD1SURBVDhPY/z//z8DTpCdLQGmp059AabRABOUxgS56RoMLH8OgzGIjQVg11yQ4QCUOc7AyKACxiA2SAwNYGouSE1g+P9vN1CTAFSEAcwGiYHkkACq5vy0ZqDQfAZGRhaoCAKAxYByYDUQAAmwhAQOBgH2+UB+BESYIFjB8OFnIuP/rCwJBtY/q4ECNhBxosERRFSB/QN0Fgz8Z9gAdNdFCJtRH+jvADAbDBgdGSbMOIA7qhj/bWSYMKsBjEFsLAC3ZiLAoNTMlMyQnw6MVyAGsbEAhGZG5i8M//8/QMIywGAGJkkgBrGR5f79/QHWgjdX4QUMDAArRF0qt/AOgQAAAABJRU5ErkJggg==" />
 					<span>ㅤ主页.</span>
@@ -304,12 +304,10 @@
 		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours)
 		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes)
 		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds)
-		document.getElementById("sitetime").innerHTML='<span class="text_7">已上线: <span class="text_6">' + (diffYears*365+diffDays) + '</span> 天 - <span class="text_6">' + diffHours + '</span> 小时 - <span class="text_6">' + diffMinutes + '</span> 分 - <span class="text_6">' + diffSeconds + '</span> 秒</span>'
+		document.getElementById("sitetime").innerHTML='<span class="text_7">已上线: <span class="text_6">' + (diffYears*365+diffDays) + '</span> 天 - <span class="text_6">' + diffHours + '</span> 小时 - <span class="text_6">' +  diffMinutes + '</span> 分 - <span class="text_6">' + diffSeconds + '</span> 秒</span>'
 	}
 	siteTime();
 </script>
-
-
 
 
 </html>
