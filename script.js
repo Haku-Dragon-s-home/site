@@ -62,7 +62,36 @@ window.onload = () => {
         });
     }
 
-
+// 打印日志.
+var seconds = 1000
+var minutes = seconds * 60
+var hours = minutes * 60
+var days = hours * 24
+var years = days * 365
+var today = new Date()
+var todayYear = today.getFullYear()
+var todayMonth = today.getMonth()
+var todayDate = today.getDate()
+var todayHour = today.getHours()
+var todayMinute = today.getMinutes()
+var todaySecond = today.getSeconds()
+var t1 = Date.UTC(2023,1,3,11,23,35)
+var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
+var diff = t2-t1
+var diffYears = Math.floor(diff/years)
+var diffDays = Math.floor((diff/days)-diffYears*365)
+console.log(
+	'\n%cHaku-Dragon %c|%c Version beta.0.07.23.2.12\n%c欢迎来到 %c白龙巜丶%c的个人主页!' + '\n\n%c已上线: %c' + (diffYears*365+diffDays) + ' %c天.\n',
+	'color: rgba(196, 169, 139, 0.8)',
+	'color: rgba(196, 169, 139, 0.4)',
+	'color: rgba(196, 169, 139, 0.8)',
+	'color: rgba(100, 102, 102, 0.8)',
+	'color: rgba(113, 199, 173, 0.8)',
+	'color: rgba(100, 102, 102, 0.8)',
+	'color: rgba(100, 102, 102, 0.8)',
+	'color: rgba(244, 183, 188, 0.9)',
+	'color: rgba(100, 102, 102, 0.8)',
+);
 
 
 
