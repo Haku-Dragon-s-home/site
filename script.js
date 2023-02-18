@@ -96,16 +96,25 @@ console.log(
 
 
 
+
+
+
+
 //Other functions
 
- function fun_0(){
+function fun_0(){
 	document.execCommand("Copy");	
 };
 
- function fun_1(){
+function fun_1(){
 	location.reload();
 };
 
- function fun_2(){
+function fun_2(){
 	smoothScroll('#p1')
+};
+
+function fun_3(){
+	var modal = document.querySelector("#modal-2");
+	modal.classList.remove("md-show");
 };
