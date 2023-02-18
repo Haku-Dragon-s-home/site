@@ -24,6 +24,18 @@
 <!-- 加载动画 -->
 <section class="bg"></section>
 <div class="text">0 %</div>
+
+<!-- 问候语 -->
+<div class="md-effect-2" id="modal-2">
+	<div class="md-content">
+		<h3>这里是白龙巜丶的个人主页.<a href="javascript:void(0)" onclick="fun_3()">✕</a></h3>
+		<div>
+			<p id="hello_1">出现了什么问题</p>
+			<p id="hello_2">不是吗？</p>
+		</div>
+	</div>
+</div>
+
 <script>
 	const background = document.querySelector('.bg')
 	const text = document.querySelector('.text')
@@ -34,16 +46,60 @@
 	let time1 = setInterval(() => {
 		loading++
  		 if(loading > 99) {
-    			 background.style.visibility = 'hidden';
-       			 text.style.visibility = 'hidden';
-       			 clearInterval(time1)
+    			background.style.visibility = 'hidden';
+       			text.style.visibility = 'hidden';
+       			clearInterval(time1);
+			hello();
 		}
+
 		text.innerHTML = `${loading} %`
 		text.style.opacity = scale(loading,0,100,1,0)
 		background.style.filter = `blur(${scale(120 - loading,0,100,30,0)}px)`
 		background.style.opacity = scale(loading * 2 - 100,0,100,1,0)
 	},40)
+	// 问候语
+	function hello(){
+			var date = new Date();
+			var hour = date.getHours() + 1;
+			if (hour>0) {
+				document.getElementById("hello_1").innerHTML="不许动!";
+				document.getElementById("hello_2").innerHTML="大半夜的不睡觉，被逮到了吧？";
+			};
+			if (hour>6) {
+				document.getElementById("hello_1").innerHTML="早安!";
+				document.getElementById("hello_2").innerHTML="晨的清新迎面而来，愿您拥有美好的一天.";
+			};
+			if (hour>11) {
+				document.getElementById("hello_1").innerHTML="中午好!";
+				document.getElementById("hello_2").innerHTML="太阳应该已经很高了吧.";
+			};
+			if (hour>13) {
+				document.getElementById("hello_1").innerHTML="下午好!";
+				document.getElementById("hello_2").innerHTML="利用这个惬意的下午，好好放松一下吧.";
+			};
+			if (hour>18) {
+				document.getElementById("hello_1").innerHTML="傍晚好!";
+				document.getElementById("hello_2").innerHTML="出去走走，看看夕阳.";
+			};
+			if (hour>20) {
+				document.getElementById("hello_1").innerHTML="晚上好!";
+				document.getElementById("hello_2").innerHTML="很荣幸与您在这个宁静的夜晚相遇.";
+			};
+			if (hour>23) {
+				document.getElementById("hello_1").innerHTML="晚安! ";
+				document.getElementById("hello_2").innerHTML="准备迎接崭新的一天!";
+			};
 
+			var modal = document.querySelector("#modal-2");
+			setTimeout(function(){
+				modal.classList.add("md-show");
+			},500);
+
+			//动画效果
+			setTimeout(function () {
+				document.documentElement.classList.add("md-perspective");
+			}, 25);
+	};
 </script>
 
 <!-- 加载背景   参考了 "豆苗学前端" 的循环滚动图片 -->
@@ -82,6 +138,9 @@
 	</ul>
 
 </div>
+
+
+
 
 
 <!-- 以下内容将会淡入 -->
@@ -237,7 +296,7 @@
 						<p style="color: rgb(113, 199, 173); font-size: 25px;"># </p>
 						<span>播放列表.</span>
 					</div>
-					<span id="close" class="iconfont icon-guanbi"></span>
+					<span id="close" class="icon-guanbi"></span>
 				</div>
 				<ul></ul>
 			</div>
