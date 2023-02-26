@@ -649,6 +649,10 @@ ul li.playing {
 }
 
 
+
+
+
+
 /* 页脚   有点点bug*/
 .foot_1 {
 	position: absolute;
@@ -716,8 +720,14 @@ ul li.playing {
 	color: rgba(100, 102, 102, 0.8);
 	left: calc(50% - 30px);
 	top: calc(50% - 60px);
+	opacity: 0;
 	user-select: none;
 }
+
+.text-o {
+	opacity: 1;
+}
+
 
 /* 弹出动画 */
 .out_1 {
