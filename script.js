@@ -5,48 +5,45 @@ window.onload = () => {
 
 
 
-	// 加载动画播放完成 且 文件全部加载 后开始渲染
-	let time2 = setInterval(() => {
- 		 if(loading > 99) {
-			// 滚动到顶部
-			window.scrollTo (0, 0);
+	// 文件全部加载后开始渲染
+	text.animate([{ opacity: 1, easing: 'ease-in' }, { opacity: 0, easing: 'ease-out' }],3000); 
+	text.classList.remove('text-o');
 
-			// 弹出问候框
-			hello();
+	// 滚动到顶部
+	window.scrollTo (0, 0);
 
-			// 渲染动画
-			let shell = document.getElementById('shell');
-			shell.animate([{ transform: 'translateX(-100px)' }, { transform: 'translateX(0px)', offset: 0.3 }],1000); 
-			shell.classList.add('shell-show');
+	// 弹出问候框
+	hello();
 
-			let p_1 = document.getElementById('p_1');
-			p_1.classList.add('out_2');
+	// 渲染动画
+	let shell = document.getElementById('shell');
+	shell.animate([{ transform: 'translateX(-100px)' }, { transform: 'translateX(0px)', offset: 0.3 }],1000); 
+	shell.classList.add('shell-show');
 
-			let percent = document.getElementById('percent');
-			percent.animate([{ opacity: 0, easing: 'ease-out' }, { opacity: 1, easing: 'ease-in' }],1000); 
-			percent.classList.remove('text_3-o');
+	let p_1 = document.getElementById('p_1');
+	p_1.classList.add('out_2');
 
-			let foot = document.getElementById('foot');
-			foot.animate([{ opacity: 0, easing: 'ease-out' }, { opacity: 1, easing: 'ease-in' }],1000); 
-			foot.classList.remove('foot-o');
+	let percent = document.getElementById('percent');
+	percent.animate([{ opacity: 0, easing: 'ease-out' }, { opacity: 1, easing: 'ease-in' }],1000); 
+	percent.classList.remove('text_3-o');
 
-			let time3 = setInterval(() => {
-				let p_2 = document.getElementById('p_2');
-				p_2.classList.add('out_2');
-	   			clearInterval(time3);
-			},100)
-			let time4 = setInterval(() => {
-				let player = document.getElementById('player');
-				player.classList.add('out_2');
-	 		  	clearInterval(time4);
-			},300)
+	let foot = document.getElementById('foot');
+	foot.animate([{ opacity: 0, easing: 'ease-out' }, { opacity: 1, easing: 'ease-in' }],1000); 
+	foot.classList.remove('foot-o');
 
-	   		clearInterval(time2);
-		} else {
-			// 页面加载完后加速计时器
-			loading = loading * 2
-		}
+	let time3 = setInterval(() => {
+		let p_2 = document.getElementById('p_2');
+		p_2.classList.add('out_2');
+	   	clearInterval(time3);
 	},100)
+	let time4 = setInterval(() => {
+		let player = document.getElementById('player');
+		player.classList.add('out_2');
+	 	  clearInterval(time4);
+	},300)
+
+
+
 
 	openMenu = e => {
 		e.preventDefault()
