@@ -1,66 +1,104 @@
 window.onload = () => {
-    const menu = document.querySelector('.menu')
-    const menuHeight = menu.offsetHeight - parseInt(getComputedStyle(menu)['paddingTop']) - parseInt(getComputedStyle(menu)['paddingBottom'])
-    menu.style.height = '0'
+	const menu = document.querySelector('.menu')
+	const menuHeight = menu.offsetHeight - parseInt(getComputedStyle(menu)['paddingTop']) - parseInt(getComputedStyle(menu)['paddingBottom'])
+	menu.style.height = '0'
 
-    // 全部元素加载完成后淡入主体部分
-    let main = document.getElementById('main');
-    main.classList.add('fade-in');
-    let player = document.getElementById('player');
-    player.classList.add('fade-in');
 
-    openMenu = e => {
-        e.preventDefault()
 
-        // 防止菜单超出界面
-        var h = document.body.clientHeight - 180;
-        var w = document.body.clientWidth - 170;
+	// 加载动画播放完成 且 文件全部加载 后开始渲染
+	let time2 = setInterval(() => {
+ 		 if(loading > 99) {
+			// 滚动到顶部
+			window.scrollTo (0, 0);
 
-        if(e.clientX>w){
-                menu.style.left = `${w}px`
-        } else {
-                menu.style.left = `${e.clientX}px`
-        }
+			// 弹出问候框
+			hello();
 
-        if(e.clientY>h){
-                menu.style.top = `${e.pageY - 175}px`
-        } else {
-                menu.style.top = `${e.pageY + 5}px`
-        }
+			// 渲染动画
+			let shell = document.getElementById('shell');
+			shell.animate([{ transform: 'translateX(-100px)' }, { transform: 'translateX(0px)', offset: 0.3 }],1000); 
+			shell.classList.add('shell-show');
 
-        menu.classList.add('is-active')
-        menu.style.height = `${menuHeight}px`
+			let p_1 = document.getElementById('p_1');
+			p_1.classList.add('out_2');
 
-        return false
-    }
+			let percent = document.getElementById('percent');
+			percent.animate([{ opacity: 0, easing: 'ease-out' }, { opacity: 1, easing: 'ease-in' }],1000); 
+			percent.classList.remove('text_3-o');
 
-    closeMenu = () => {
-        menu.style.height = '0'
-        menu.classList.remove('is-active')
-    }
-    window.onclick = () => closeMenu()
+			let foot = document.getElementById('foot');
+			foot.animate([{ opacity: 0, easing: 'ease-out' }, { opacity: 1, easing: 'ease-in' }],1000); 
+			foot.classList.remove('foot-o');
+
+			let time3 = setInterval(() => {
+				let p_2 = document.getElementById('p_2');
+				p_2.classList.add('out_2');
+	   			clearInterval(time3);
+			},100)
+			let time4 = setInterval(() => {
+				let player = document.getElementById('player');
+				player.classList.add('out_2');
+	 		  	clearInterval(time4);
+			},500)
+
+	   		clearInterval(time2);
+		} else {
+			// 页面加载完后加速计时器
+			loading = loading * 2
+		}
+	},100)
+
+	openMenu = e => {
+		e.preventDefault()
+
+		// 防止菜单超出界面
+		var h = document.body.clientHeight - 180;
+		var w = document.body.clientWidth - 170;
+
+		if(e.clientX>w){
+				menu.style.left = `${w}px`
+		} else {
+				menu.style.left = `${e.clientX}px`
+		}
+
+		if(e.clientY>h){
+				menu.style.top = `${e.pageY - 175}px`
+		} else {
+				menu.style.top = `${e.pageY + 5}px`
+		}
+
+		menu.classList.add('is-active')
+		menu.style.height = `${menuHeight}px`
+
+		return false
+	}
+
+	closeMenu = () => {
+		menu.style.height = '0'
+		menu.classList.remove('is-active')
+	}
+	window.onclick = () => closeMenu()
+	window.onscroll = () => closeMenu()
 }
 
-
-
-    // 跳转主要核心函数
-    const goAnchorPoint = (elemId) => {
-        let anchorHeight = document.getElementById(elemId).offsetTop
-        if (document.documentElement.scrollTop) {
-            document.documentElement.scrollTop = anchorHeight
-        } else if (document.body.scrollTop) {
-            document.body.scrollTop = anchorHeight
-        } else {
-            //这个else指以上两种值均为0的状态，有一者是恒为0的，另一者可能因为回到顶部等操作被置为0，便会出现这种状况
-            document.documentElement.scrollTop = anchorHeight
-            document.body.scrollTop = anchorHeight
-        }
-    }
-    const smoothScroll = (element) => {
-        document.querySelector(element).scrollIntoView({
-            behavior: 'smooth' // 取值用平滑滚动
-        });
-    }
+	// 跳转主要核心函数
+	const goAnchorPoint = (elemId) => {
+		let anchorHeight = document.getElementById(elemId).offsetTop
+		if (document.documentElement.scrollTop) {
+			document.documentElement.scrollTop = anchorHeight
+		} else if (document.body.scrollTop) {
+			document.body.scrollTop = anchorHeight
+		} else {
+			//这个else指以上两种值均为0的状态，有一者是恒为0的，另一者可能因为回到顶部等操作被置为0，便会出现这种状况
+			document.documentElement.scrollTop = anchorHeight
+			document.body.scrollTop = anchorHeight
+		}
+	}
+	const smoothScroll = (element) => {
+		document.querySelector(element).scrollIntoView({
+			behavior: 'smooth' // 取值用平滑滚动
+		});
+	}
 
 // 打印日志.
 var seconds = 1000
@@ -81,7 +119,7 @@ var diff = t2-t1
 var diffYears = Math.floor(diff/years)
 var diffDays = Math.floor((diff/days)-diffYears*365)
 console.log(
-	'\n%cHaku-Dragon %c|%c Version beta.0.07.23.2.12\n%c欢迎来到 %c白龙巜丶%c的个人主页!' + '\n\n%c已上线: %c' + (diffYears*365+diffDays) + ' %c天.\n',
+	'\n%cHaku-Dragon %c|%c Version beta.0.09.23.2.25\n%c欢迎来到 %c白龙巜丶%c的个人主页!' + '\n\n%c已上线: %c' + (diffYears*365+diffDays) + ' %c天.\n',
 	'color: rgba(196, 169, 139, 0.8)',
 	'color: rgba(196, 169, 139, 0.4)',
 	'color: rgba(196, 169, 139, 0.8)',
