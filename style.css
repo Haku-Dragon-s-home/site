@@ -716,7 +716,7 @@ ul li.playing {
 	color: rgba(100, 102, 102, 0.8);
 	left: calc(50% - 30px);
 	top: calc(50% - 60px);
-	user-select: none;
+
 }
 
 /* 弹出动画 */
@@ -758,6 +758,7 @@ ul li.playing {
 	bottom: 0px;
 	right: 0px;
 	z-index: 2;
+	animation: cloud 1s;
 }
 
 /* 文本背景 */
@@ -771,6 +772,13 @@ ul li.playing {
 	border-radius: 15px;
 	-webkit-border-radius: 15px;
 	color: rgba(255, 255, 255, 0.15);
+	z-index: 5;
+}
+
+.frosted_glass:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	transform: scale(1.01);
+	transition: 0.5s;
 }
 
 /* 滚动条百分比 */
