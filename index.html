@@ -52,11 +52,7 @@
 			background.classList.add('backgroundz');
        			clearInterval(time1);
 		}
-
 		text.innerHTML = `${loading} %`
-		text.style.opacity = scale(loading,0,100,1,0)
-		background.style.filter = `blur(${scale(120 - loading,0,100,30,0)}px)`
-		background.style.opacity = scale(loading * 2 - 100,0,100,1,0)
 	},40)
 	// 问候语
 	function hello(){
