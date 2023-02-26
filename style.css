@@ -61,6 +61,7 @@ body {
 	overflow: hidden;
 	user-select: none;
 	transition: opacity .2s ease, height .3s ease, visibility .3s ease;
+	z-index: 20;
 }
 
 .is-active {
@@ -120,6 +121,11 @@ img {
 	-webkit-user-drag: none;
 }
 
+br {
+	-webkit-user-select: none;
+}
+
+
 
 /* 侧边栏 */
 
@@ -137,6 +143,7 @@ img {
 	border-bottom-right-radius: 15px;
 	transition: .3s;
 	overflow: hidden;
+	opacity: 0;
 
 	/* 美化 */
 	background-color: rgba(255, 255, 255, 0.05);
@@ -145,6 +152,11 @@ img {
 	-webkit-backdrop-filter: blur(0px);
 	border: 1px solid rgba(255, 255, 255, 0.18);
 	user-select: none;
+	z-index: 5;
+}
+
+.shell-show {
+	opacity: 1;
 }
 
 .box {
@@ -257,7 +269,8 @@ img {
 	-webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
 	border-radius: 15px;
 	-webkit-border-radius: 15px;
-	user-select: none;
+
+	z-index: 5;
 }
 
 .wrapper i {
@@ -278,6 +291,7 @@ img {
 	margin-top: 5px;
 	border-radius: 15px;
 	box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
+	-webkit-user-select: none;
 }
 
 .img-area img {
@@ -312,6 +326,7 @@ img {
 	border-radius: 50px;
 	background: rgba(244, 243, 241 , 0.5);
 	cursor: pointer;
+	user-select: none;
 }
 
 .progress-area .progress-bar {
@@ -352,6 +367,7 @@ img {
 	bottom: -55%;
 	opacity: 0;
 	pointer-events: none;
+	-webkit-user-select: none;
 	z-index: 5;
 	/* 列表文本高度 */
 	padding: 12px 30px;
@@ -484,56 +500,6 @@ ul li.playing {
 
 
 
-
-/* 淡入动画 */
-/*自定义一个透明度从0到1的动画，它的名称是fade-in*/
-@keyframes fade-in {  
-	0%{ opacity: 0;}
-	100%{opacity:1;}
-}
-
-@-webkit-keyframes fade-in {
-	0%{ opacity: 0;}
-	100%{opacity:1;}
-}
-
-@-ms-keyframes fade-in {
-	0%{ opacity: 0;}
-	100%{opacity:1;}
-}
-
-@-o-keyframes fade-in {
-	0%{ opacity: 0;}
-	100%{opacity:1;}
-}
-
-@-moz-keyframes fade-in {
-	0%{ opacity: 0;}
-	100%{opacity:1;}
-}
-
-.fade-in {
-	opacity: 0;
-	/*实先规定文字的状态是不显示的*/
-
-	animation: fade-in 6s ease 3s 1;
-	/*调用名称为fade-in的动画，全程动画显示时间4S，进入方式为ease，延时0S进入，播放次数1次*/
-
-	-webkit-animation: fade-in 6s ease 0s 1;
-	-moz-animation: fade-in 6s ease 0s 1;
-	-o-animation: fade-in 6s ease 0s 1;
-	-ms-animation: fade-in 6s ease 0s 1;
-	
-	/*规定动画的最后状态为结束状态*/
-	animation-fill-mode:forwards;
-	-webkit-animation-fill-mode: forwards;  
-	-o-animation-fill-mode: forwards; 
-	-ms-animation-fill-mode: forwards;   
-	-moz-animation-fill-mode: forwards; 
-}
-
-
-
 /* 问候语 */
 .md-content {
 	position: absolute;
@@ -602,16 +568,7 @@ ul li.playing {
 	}
 }
 
-.md-effect-1 .md-content {
-	transform: translateY(-200%);
-	opacity: 0;
-}
 
-.md-show.md-effect-1 .md-content {
-	transform: translateY(0);
-	opacity: 1;
-	transition: all 0.5s 0.1s;
-}
 
 /*弹窗弹出效果-1*/
 /* Effect 2: Fade in and scale up */
@@ -667,6 +624,29 @@ ul li.playing {
 	100%{-webkit-transform:rotate(0deg);}
 }
 
+/* 侧边栏弹出动画 */
+@keyframes fadein {
+	0% {
+		transform: translate(-100%, 0);
+	}
+	100% {
+		transform: none;
+	}
+}
+
+.cloud {
+	animation: cloud 2s	
+}
+
+/* 淡入云 */
+@keyframes cloud {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
 
 /* 页脚   有点点bug*/
@@ -678,39 +658,46 @@ ul li.playing {
 	height: 180px;
 }
 
+.foot-o {
+	opacity: 0;
+}
+
 .foot_2 {
 	position: absolute;
 	top: 35px;
 	left: calc(50% - 290px);
-
+	z-index: 5;
 }
 
 .foot_3 {
 	position: absolute;
 	top: 35px;
 	left: calc(50% - 110px);
-
+	z-index: 5;
 }
 
 .foot_4 {
 	position: absolute;
 	top: 35px;
 	left: calc(50% + 60px);
-
+	z-index: 5;
 }
 
 .foot_5 {
 	position: absolute;
 	top: 35px;
 	left: calc(50% + 240px);
-
+	z-index: 5;
+}
+.foot_6 {
+	position: absolute;
+	z-index: 5;
 }
 
 
 
 /* 加载动画 */
 .bg{
-	background: url('resource/loading.png') no-repeat center center/cover;
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -732,6 +719,34 @@ ul li.playing {
 	user-select: none;
 }
 
+/* 弹出动画 */
+.out_1 {
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transform: scale(0.7);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.out_2 {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+.backgroundz {
+	z-index: 3;
+}
+
+.in {
+	opacity: 1;
+}
+
 
 
 
@@ -742,6 +757,7 @@ ul li.playing {
 	position: fixed;
 	bottom: 0px;
 	right: 0px;
+	z-index: 2;
 }
 
 /* 文本背景 */
@@ -755,8 +771,6 @@ ul li.playing {
 	border-radius: 15px;
 	-webkit-border-radius: 15px;
 	color: rgba(255, 255, 255, 0.15);
-	user-select: none;
-	transition: 0.8s;
 }
 
 /* 滚动条百分比 */
