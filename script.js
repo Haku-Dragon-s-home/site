@@ -39,7 +39,7 @@ window.onload = () => {
 				let player = document.getElementById('player');
 				player.classList.add('out_2');
 	 		  	clearInterval(time4);
-			},500)
+			},300)
 
 	   		clearInterval(time2);
 		} else {
@@ -119,7 +119,7 @@ var diff = t2-t1
 var diffYears = Math.floor(diff/years)
 var diffDays = Math.floor((diff/days)-diffYears*365)
 console.log(
-	'\n%cHaku-Dragon %c|%c Version beta.0.09.23.2.25\n%c欢迎来到 %c白龙巜丶%c的个人主页!' + '\n\n%c已上线: %c' + (diffYears*365+diffDays) + ' %c天.\n',
+	'\n%cHaku-Dragon %c|%c Version beta.0.10.23.2.26\n%c欢迎来到 %c白龙巜丶%c的个人主页!' + '\n\n%c已上线: %c' + (diffYears*365+diffDays) + ' %c天.\n',
 	'color: rgba(196, 169, 139, 0.8)',
 	'color: rgba(196, 169, 139, 0.4)',
 	'color: rgba(196, 169, 139, 0.8)',
