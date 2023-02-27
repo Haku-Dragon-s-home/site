@@ -42,6 +42,7 @@ body {
 	height: 100%;
 	position: fixed;
 	background: linear-gradient(to bottom, rgb(160, 227, 252) 40%, rgb(217, 227, 252));
+	animation: cloud 2s	
 }
 
 
@@ -54,7 +55,7 @@ body {
 	box-shadow: 0 1px 4px rgba(28, 28, 32, .04), 0 8px 24px rgba(28, 28, 32, .12);
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, 0.18);
-	background-color: rgba(255, 255, 255, 0.05);
+	background-color: rgba(255, 255, 255, 0.3);
 	backdrop-filter: blur(0px);
 	-webkit-backdrop-filter: blur(0px);
 	visibility: hidden;
@@ -635,7 +636,7 @@ ul li.playing {
 }
 
 .cloud {
-	animation: cloud 2s	
+	animation: cloud 10s	
 }
 
 /* 淡入云 */
@@ -647,11 +648,6 @@ ul li.playing {
 		opacity: 1;
 	}
 }
-
-
-
-
-
 
 /* 页脚   有点点bug*/
 .foot_1 {
@@ -720,14 +716,8 @@ ul li.playing {
 	color: rgba(100, 102, 102, 0.8);
 	left: calc(50% - 30px);
 	top: calc(50% - 60px);
-	opacity: 0;
 	user-select: none;
 }
-
-.text-o {
-	opacity: 1;
-}
-
 
 /* 弹出动画 */
 .out_1 {
@@ -768,7 +758,7 @@ ul li.playing {
 	bottom: 0px;
 	right: 0px;
 	z-index: 2;
-	animation: cloud 1s;
+	opacity = 0;
 }
 
 /* 文本背景 */
