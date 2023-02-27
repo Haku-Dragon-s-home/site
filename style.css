@@ -758,7 +758,7 @@ ul li.playing {
 	bottom: 0px;
 	right: 0px;
 	z-index: 2;
-	opacity = 0;
+	opacity: 0;
 }
 
 /* 文本背景 */
