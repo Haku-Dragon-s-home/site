@@ -3,11 +3,10 @@ window.onload = () => {
 	const menuHeight = menu.offsetHeight - parseInt(getComputedStyle(menu)['paddingTop']) - parseInt(getComputedStyle(menu)['paddingBottom'])
 	menu.style.height = '0'
 
-
-
 	// 文件全部加载后开始渲染
-	text.animate([{ opacity: 1, easing: 'ease-in' }, { opacity: 0, easing: 'ease-out' }],3000); 
-	text.classList.remove('text-o');
+	text.animate([{ opacity: 1, easing: 'ease-in' }, { opacity: 0, easing: 'ease-out' }],1000); 
+	text.style.opacity = 0;
+	background.classList.add('backgroundz');
 
 	// 滚动到顶部
 	window.scrollTo (0, 0);
@@ -22,6 +21,10 @@ window.onload = () => {
 
 	let p_1 = document.getElementById('p_1');
 	p_1.classList.add('out_2');
+
+	let Haku = document.getElementById('Haku');
+	Haku.animate([{ opacity: 0, easing: 'ease-out' }, { opacity: 1, easing: 'ease-in' }],1000); 
+	Haku.style.opacity = 1;
 
 	let percent = document.getElementById('percent');
 	percent.animate([{ opacity: 0, easing: 'ease-out' }, { opacity: 1, easing: 'ease-in' }],1000); 
