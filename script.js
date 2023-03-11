@@ -6,7 +6,6 @@ window.onload = () => {
 	// 文件全部加载后开始渲染
 	text.animate([{ opacity: 1, easing: 'ease-in' }, { opacity: 0, easing: 'ease-out' }],1000); 
 	text.style.opacity = 0;
-	background.classList.add('backgroundz');
 
 	// 滚动到顶部
 	window.scrollTo (0, 0);
