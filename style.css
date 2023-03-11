@@ -713,6 +713,7 @@ ul li.playing {
 	color: rgba(100, 102, 102, 0.8);
 	left: calc(50% - 30px);
 	top: calc(50% - 60px);
+	z-index: 5;
 	user-select: none;
 }
 
