@@ -1,9 +1,15 @@
+window.document.oncontextmenu = function(){ 
+	return false;
+} 
+
 window.onload = () => {
 	const menu = document.querySelector('.menu')
 	const menuHeight = menu.offsetHeight - parseInt(getComputedStyle(menu)['paddingTop']) - parseInt(getComputedStyle(menu)['paddingBottom'])
 	menu.style.height = '0'
 
 	// 文件全部加载后开始渲染
+
+	// 淡出百分比
 	text.animate([{ opacity: 1, easing: 'ease-in' }, { opacity: 0, easing: 'ease-out' }],1000); 
 	text.style.opacity = 0;
 
@@ -14,6 +20,10 @@ window.onload = () => {
 	hello();
 
 	// 渲染动画
+	let cloud = document.getElementById('list');
+	cloud.classList.add('cloud');
+	cloud.style.opacity = 1;
+
 	let shell = document.getElementById('shell');
 	shell.animate([{ transform: 'translateX(-100px)' }, { transform: 'translateX(0px)', offset: 0.3 }],1000); 
 	shell.classList.add('shell-show');
@@ -66,18 +76,27 @@ window.onload = () => {
 				menu.style.top = `${e.pageY + 5}px`
 		}
 
-		menu.classList.add('is-active')
 		menu.style.height = `${menuHeight}px`
+		menu.classList.add('out_2');
+		menu.classList.add('is-active');
 
 		return false
 	}
 
 	closeMenu = () => {
-		menu.style.height = '0'
 		menu.classList.remove('is-active')
+		menu.classList.remove('out_2');
+
+		// 菜单位置归零
+		let time5 = setInterval(() => {
+			menu.style["top"] = null;
+			menu.style["left"] = null;
+	 		clearInterval(time5);
+		},300)
 	}
 	window.onclick = () => closeMenu()
 	window.onscroll = () => closeMenu()
+	// window.onblur = () => closeMenu()
 }
 
 	// 跳转主要核心函数
@@ -118,7 +137,7 @@ var diff = t2-t1
 var diffYears = Math.floor(diff/years)
 var diffDays = Math.floor((diff/days)-diffYears*365)
 console.log(
-	'\n%cHaku-Dragon %c|%c Version beta.0.10.23.2.26\n%c欢迎来到 %c白龙巜丶%c的个人主页!' + '\n\n%c已上线: %c' + (diffYears*365+diffDays) + ' %c天.\n',
+	'\n%cHaku-Dragon %c|%c Version beta.0.11.23.3.12\n%c欢迎来到 %c白龙巜丶%c的个人主页!' + '\n\n%c已上线: %c' + (diffYears*365+diffDays) + ' %c天.\n',
 	'color: rgba(196, 169, 139, 0.8)',
 	'color: rgba(196, 169, 139, 0.4)',
 	'color: rgba(196, 169, 139, 0.8)',
