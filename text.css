@@ -1,3 +1,12 @@
+/*
+绿 113, 199, 173
+粉 244, 183, 188
+白 244, 243, 241
+灰 192, 194, 194
+*/
+
+
+
 .text_1 {
 	position: absolute;
 	font-size: 30px;
@@ -24,14 +33,6 @@
 .text_4 {
 	font-size: 20px;
 	user-select: none;
-	color: rgba(100, 102, 102, 0.8);
-	opacity: 0.8;
-}
-
-.text_5 {
-	font-size: 20px;
-	user-select: none;
-	color: rgb(244, 183, 188);
 }
 
 .text_6 {
