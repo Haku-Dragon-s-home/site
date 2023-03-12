@@ -28,7 +28,7 @@
 <!-- 问候语 -->
 <div class="md-effect-2" id="modal-2">
 	<div class="md-content">
-		<h3>这里是白龙巜丶的个人主页.<a href="javascript:void(0)" onclick="fun_3()">✕</a></h3>
+		<h3>这里是 <span style="color: rgb(244, 243, 241);">白龙</span><span style="color: rgb(113, 199, 173);">巜丶</span>的个人主页.<a href="javascript:void(0)" onclick="fun_3()">✕</a></h3>
 		<div>
 			<p id="hello_1">出现了什么问题</p>
 			<p id="hello_2">不是吗？</p>
@@ -102,12 +102,12 @@
 <!-- 加载背景   参考了 "豆苗学前端" 的循环滚动图片 -->
 <div class="background-color"></div>
 <div class="background" id="background">
-	<ul id="list">
-		<li><img src="resource/0.png" class="cloud" /></li>
-		<li><img src="resource/2.png" class="cloud" /></li>
-		<li><img src="resource/0.png" class="cloud" /></li>
-		<li><img src="resource/3.png" class="cloud" /></li>
-		<li><img src="resource/1.png" class="cloud" /></li>
+	<ul id="list" style="opacity: 0; z-index: -5;">
+		<li><img src="resource/0.png"/></li>
+		<li><img src="resource/2.png"/></li>
+		<li><img src="resource/3.png"/></li>
+		<li><img src="resource/0.png"/></li>
+		<li><img src="resource/1.png"/></li>
 	<script>
 		var box = document.getElementById('background');
 		var list = document.getElementById('list');
@@ -115,19 +115,18 @@
 		list.innerHTML += list.innerHTML;
 
 		window.setInterval(function() {
-		setTimeout(function() {
-			left -= 0.25;
-			if (left <= -3000) {
-				left=0;
-			}
-			list.style.left = left + 'px';
+			setTimeout(function() {
+				left -= 0.25;
+				if (left <= -3000) {
+					left=0;
+				}
+				list.style.left = left + 'px';
 
-			// 计算滚动条百分比
-			var bar = document.documentElement.scrollHeight || document.body.scrollHeight;
-			var p_1 = document.getElementById("per");
-			p_1.innerHTML=(((document.documentElement.scrollTop || document.body.scrollTop) / (bar - document.documentElement.clientHeight || document.body.clientHeight)) * 100).toFixed(0) + " " +"%";
-
-}, 0);
+				// 计算滚动条百分比
+				var bar = document.documentElement.scrollHeight || document.body.scrollHeight;
+				var p_1 = document.getElementById("per");
+				p_1.innerHTML=(((document.documentElement.scrollTop || document.body.scrollTop) / (bar - document.documentElement.clientHeight || document.body.clientHeight)) * 100).toFixed(0) + " " +"%";
+			}, 0);
 		}, 20);
 
 
@@ -164,7 +163,13 @@
 	<center>
 		<hr size=1 style="opacity: 0.5; color: rgba(100, 102, 102, 0.5); width: 80%;"></hr>
 	</center>
-		<span  class="text_4">Copyright © 2023 </span><a href="https://music.163.com/#/user/home?id=6288053607" target="_blank" class="text_5">白龙巜丶</a><span class="text_4">All rights reserved.</span>
+		<span  class="text_4" style="color: rgba(100, 102, 102, 0.8);">
+			Copyright © 2023 
+		</span>
+		<a href="https://music.163.com/#/user/home?id=6288053607" target="_blank" class="text_4"  style="color: rgb(244, 243, 241);">白龙<span style="color: rgb(113, 199, 173);">巜丶</span></a>
+		<span class="text_4" style="color: rgba(100, 102, 102, 0.8);">
+			All rights reserved.
+		</span>
 		<br />
 		<br />
 		<br />
@@ -310,25 +315,25 @@
 
 
 	<!-- 右键菜单 参考了 "前端小池" 的作品 -->
-	<div class="menu">
+	<div class="menu out_1">
 		<ul class="menu-list">
 			 <a href = "javascript:void(0)" onclick="fun_0();">
 				<li class="menu-item">
-					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABpSURBVDhPY2QAAnNze4V////dB7GJBf///3/ABGWTBRhNzGzPA825AOUTBIz/GWwYGBlVQDYzmJraNkDFiQImZjbzTc1s/5uY2tynyNmjmkkEI0nz6VOHGc+cPqJIVto+ffqIKgMDAwMA0F8ijlks7YQAAAAASUVORK5CYII=" />
-					<span>ㅤ复制.</span>
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABpSURBVDhPY2QAAnNze4V////dB7GJBf///3/ABGWTBRhNzGzPA825AOUTBIz/GWwYGBlVQDYzmJraNkDFiQImZjbzTc1s/5uY2tynyNmjmkkEI0nz6VOHGc+cPqJIVto+ffqIKgMDAwMA0F8ijlks7YQAAAAASUVORK5CYII="  style="opacity: 0.7" />
+					<span style="color: rgba(100, 102, 102, 0.8)">ㅤ复制.</span>
 					<!-- 感觉有点鸡肋 -->
 				</li>
 			</a>
 			<a href = "javascript:void(0)" onclick="fun_1();">
 				<li class="menu-item">
-					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAGwSURBVDhPlVIhT8NQEL57nWADAgKBQEwgMcDoRkLWIpAERYJEIBAYBCEIQlCEsARQ2CUg+AEI3JoNsXWVECQIBAKBGDDB6/G1vIx0TMCXNK/57rt39907FhHqRj7vjmn+HLeE2q106vbO81omlEAi2baLa2AOQI8YihBvE1P5PW1tdV+izEl2vnguJGckdEGiZ97SahDnJDHvMNFK/4du2rY7auQx4sq5fHEDP0eiZCGo39yYWAeRjVB0jYkffb86b2ji6WlnRCn9IMz7zUa1ZPhfyBXmXCWqAh+Lvl+7irgUEgtobUC0KseqLkRVRcI1ClOXZOlbYVpC+wFRuA7PPAGvz0HgvRh9Ao2G94SEV7Z0RYjb8I9iuoJRDikEIqLPaHsCdk5Q5BC6XFQMQ71G65tKUVgHMTw1644bbU9EF+BRN+G5FCVGHDuO0/f2ru8xyQCTXI6Vf8T3U/1MspTJWLue57VNPAaWZxXKbRJr3ve9Z0P/bFi8XSTH2KYneMJT8B3oLD4HnGva3YrFBon1LBTcrBa9BxpDkQlmamHCAUSnSLw2sg4Syf9FZ7f/D6IvI8PF5VY7Q4sAAAAASUVORK5CYII=" />
-					<span>ㅤ刷新.</span>
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAGwSURBVDhPlVIhT8NQEL57nWADAgKBQEwgMcDoRkLWIpAERYJEIBAYBCEIQlCEsARQ2CUg+AEI3JoNsXWVECQIBAKBGDDB6/G1vIx0TMCXNK/57rt39907FhHqRj7vjmn+HLeE2q106vbO81omlEAi2baLa2AOQI8YihBvE1P5PW1tdV+izEl2vnguJGckdEGiZ97SahDnJDHvMNFK/4du2rY7auQx4sq5fHEDP0eiZCGo39yYWAeRjVB0jYkffb86b2ji6WlnRCn9IMz7zUa1ZPhfyBXmXCWqAh+Lvl+7irgUEgtobUC0KseqLkRVRcI1ClOXZOlbYVpC+wFRuA7PPAGvz0HgvRh9Ao2G94SEV7Z0RYjb8I9iuoJRDikEIqLPaHsCdk5Q5BC6XFQMQ71G65tKUVgHMTw1644bbU9EF+BRN+G5FCVGHDuO0/f2ru8xyQCTXI6Vf8T3U/1MspTJWLue57VNPAaWZxXKbRJr3ve9Z0P/bFi8XSTH2KYneMJT8B3oLD4HnGva3YrFBon1LBTcrBa9BxpDkQlmamHCAUSnSLw2sg4Syf9FZ7f/D6IvI8PF5VY7Q4sAAAAASUVORK5CYII=" style="opacity: 0.7" />
+					<span style="color: rgba(100, 102, 102, 0.8)">ㅤ刷新.</span>
 				</li>
 			</a>
 			<a href = "javascript:void(0)">
 				<li class="menu-item">
-					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAADjSURBVDhPrZM/CsIwGMXfi6O6OXgEwbWKQ4UcwcELeBTPoaA3cHRURBcnRzcdOzqIuJjPpI3/QVL0B1/h99I82tBSRJCHutal4sl0gctG+SyY8hkVECOg0FHNpq76POXdv6GEZhC14tg7BGYSRbrm9SuKgpIynD4KpMrCZRZSkL0z+VJAMKiAjUZ7Zu/W3sMR9HOf9jP/2Cxb+xg9gQwzxdL5fbLs4W7dkm0WJuv1YkzhKnUgUUrNb+OCN0/SzF0+ILpGzO42Lnpxu+4yt9m1pE2GcrTf+j5oiEPuH+OZH04buAJvookNcb/MOwAAAABJRU5ErkJggg==" />
-					<span>ㅤ更多.</span>
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAADjSURBVDhPrZM/CsIwGMXfi6O6OXgEwbWKQ4UcwcELeBTPoaA3cHRURBcnRzcdOzqIuJjPpI3/QVL0B1/h99I82tBSRJCHutal4sl0gctG+SyY8hkVECOg0FHNpq76POXdv6GEZhC14tg7BGYSRbrm9SuKgpIynD4KpMrCZRZSkL0z+VJAMKiAjUZ7Zu/W3sMR9HOf9jP/2Cxb+xg9gQwzxdL5fbLs4W7dkm0WJuv1YkzhKnUgUUrNb+OCN0/SzF0+ILpGzO42Lnpxu+4yt9m1pE2GcrTf+j5oiEPuH+OZH04buAJvookNcb/MOwAAAABJRU5ErkJggg==" style="opacity: 0.7" />
+					<span style="color: rgba(100, 102, 102, 0.8)">ㅤ更多.</span>
 				</li>
 			</a>
 			<li class="menu-item-divider"></li>
