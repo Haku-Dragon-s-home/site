@@ -55,20 +55,20 @@ body {
 	box-shadow: 0 1px 4px rgba(28, 28, 32, .04), 0 8px 24px rgba(28, 28, 32, .12);
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, 0.18);
-	background-color: rgba(255, 255, 255, 0.3);
-	backdrop-filter: blur(0px);
-	-webkit-backdrop-filter: blur(0px);
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	opacity: 0.5;
+
 	visibility: hidden;
 	overflow: hidden;
 	user-select: none;
-	transition: opacity .2s ease, height .3s ease, visibility .3s ease;
+	transition: opacity .2s ease, visibility .3s ease;
 	z-index: 20;
 }
 
 .is-active {
-	opacity: 0.75;
-	backdrop-filter: blur(0px);
-	-webkit-backdrop-filter: blur(0px);
+	opacity: 1;
 	visibility: visible;
 }
 
@@ -147,10 +147,10 @@ br {
 	opacity: 0;
 
 	/* 美化 */
-	background-color: rgba(255, 255, 255, 0.05);
 	box-shadow: 0 1px 4px rgba(28, 28, 32, .04), 0 8px 24px rgba(28, 28, 32, .12);
-	backdrop-filter: blur(0px);
-	-webkit-backdrop-filter: blur(0px);
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 	border: 1px solid rgba(255, 255, 255, 0.18);
 	user-select: none;
 }
@@ -261,9 +261,9 @@ br {
 	overflow: hidden;
 	position: relative;
 
-	background-color: rgba(255, 255, 255, 0.05);
-	backdrop-filter: blur(0px);
-	-webkit-backdrop-filter: blur(0px);
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 	border: 1px solid rgba(255, 255, 255, 0.18);
 	box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
 	-webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
@@ -504,10 +504,9 @@ ul li.playing {
 	width: 360px;
 	left: 1330px;
 	top: 310px;
-
-	background-color: rgba(255, 255, 255, 0.05);
-	backdrop-filter: blur(0px);
-	-webkit-backdrop-filter: blur(0px);
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 	border: 1px solid rgba(255, 255, 255, 0.18);
 	box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
 	-webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
@@ -717,6 +716,8 @@ ul li.playing {
 	user-select: none;
 }
 
+
+
 /* 弹出动画 */
 .out_1 {
 	-webkit-transform: scale(0.7);
@@ -757,7 +758,7 @@ ul li.playing {
 
 /* 文本背景 */
 .frosted_glass {
-	background-color: rgba(255, 255, 255, 0.05);
+	background-color: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(0px);
 	-webkit-backdrop-filter: blur(0px);
 	border: 1px solid rgba(255, 255, 255, 0.18);
@@ -771,6 +772,8 @@ ul li.playing {
 
 .frosted_glass:hover {
 	background-color: rgba(255, 255, 255, 0.2);
+	box-shadow: rgba(142, 142, 142, 0.29) 0px 16px 25px 0px;
+	-webkit-box-shadow: rgba(142, 142, 142, 0.29) 0px 16px 25px 0px;
 	transform: scale(1.01);
 	transition: 0.5s;
 }
@@ -783,6 +786,11 @@ ul li.playing {
 	font-size: 30px;
 	user-select: none;
 	color: rgb(151, 153, 153);
+	transition: 1s;
+}
+
+.per:hover {
+	color: rgb(244, 243, 241);
 }
 
 .p_1 {
